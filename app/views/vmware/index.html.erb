@@ -1,2 +1,36 @@
-<h1>Vmware#index</h1>
-<p>Find me in app/views/vmware/index.html.erb</p>
+<h1>VMware Example</h1>
+
+<% @vmresults["value"].each do |vmresult| %>
+<div class="clr-row">
+    <div class="clr-col-lg-3 clr-col-8">
+        <div class="card">
+            <div class="card-header">
+                <%= vmresult["name"] %>
+            </div>
+            <div class="card-block">
+                <div class="card-media-block">
+                	<clr-icon shape="vm"></clr-icon>
+                    
+                    <div class="card-media-description">
+                        <span class="card-media-title">
+                            <%= vmresult["vm"] %>
+                        </span>
+                        <span class="card-media-text">
+                            vCPU: <%= vmresult["cpu_count"] %><br />
+                            vMem: <%= vmresult["memory_size_MiB"] %>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-text">
+                    The machine is currently 
+                    <% if vmresult["power_state"] == "POWERED_ON" %>RUNNING<% end %>
+          <% if vmresult["power_state"] == "POWERED_OFF" %>OFF<% end %>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-sm btn-link">Do a thing</button>
+            </div>
+        </div>
+    </div>
+</div>
+  <% end %>

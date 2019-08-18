@@ -7,16 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/clarity-icons/0.10.28/clarity-icons.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@clr/ui/clr-ui.min.css">
     <link rel="stylesheet" type="text/css" href="chttps://unpkg.com/clarity-icons/clarity-icons.min.css">
     <script src="https://unpkg.com/@webcomponents/custom-elements/custom-elements.min.js"></script>
-    <script src="https://unpkg.com/clarity-icons/clarity-icons.min.javascript"></script>
+    <!--CLARITY ICONS STYLE-->
+    <link rel="stylesheet" href="https://unpkg.com/clarity-icons/clarity-icons.min.css">
 
+    <!--CLARITY ICONS DEPENDENCY: CUSTOM ELEMENTS POLYFILL-->
+    <script src="https://unpkg.com/@webcomponents/custom-elements/custom-elements.min.js"></script>
+
+    <!--CLARITY ICONS API & ALL ICON SETS-->
+    <script src="https://unpkg.com/clarity-icons/clarity-icons.min.js"></script>
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
-    <!-- Begin Header Navigation -->
+
+  <!-- Begin Header Navigation -->
   <%= render partial: "shared_partials/header" %>
   <!-- End Header Navigation -->
 
@@ -40,6 +48,15 @@
   <% end %>
   <!-- End Alerts -->
 
-    <%= yield %>
+  <!-- Content -->
+  <div class="main-container">
+    <div class="content-container">
+      <div class="content-area">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <!-- End content -->
+
   </body>
 </html>
