@@ -205,6 +205,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  nokogiri
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)

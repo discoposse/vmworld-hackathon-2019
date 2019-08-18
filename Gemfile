@@ -7,6 +7,8 @@ ruby '2.6.1'
 
 # httparty to do HTTP gets for API interactions
 gem 'httparty'
+# nokogiri for XML parsing
+gem 'nokogiri'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

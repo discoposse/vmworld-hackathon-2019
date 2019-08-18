@@ -1,8 +1,10 @@
 class VmwareController < ApplicationController
   def index
+    # Build the URL for what we want to get
   	vm_url = ENV["RAILS_VCENTER_URL"] + "/rest/vcenter/vm"
+    # Run the auth_vcenter process to get our token
     auth_vcenter(vm_url)
-
+    # Get the results using the auth token
     @vmresults = HTTParty.get(vm_url, 
         :headers => { 'Content-Type' => 'application/json',
                       'vmware-api-session-id' => @vctoken }, 

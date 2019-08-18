@@ -7,6 +7,7 @@ Behind the Eh?PI application:
 * Rails version 5.2.6
 * External CSS/JS to use the Clarity UI (https://clarity.design)
 * HTTParty for accessing external APIs (listed in Gemfile)
+* Nokogiri for XML parsing (https://nokogiri.org/index.html)
 * Built without Active Record or a database
 * Deployment instructions
 

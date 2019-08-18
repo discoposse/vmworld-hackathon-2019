@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'podcast/index'
   get 'vmware/index'
   get 'turbonomic/index'
   root 'home#index'

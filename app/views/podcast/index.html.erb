@@ -1,11 +1,11 @@
-<h1>VMware Example</h1>
+<h1>Podcast Example</h1>
 
-<% @vmresults["value"].each do |vmresult| %>
+<% @podcast_titles.each do |podcast_title| %>
 <div class="clr-row">
     <div class="clr-col-lg-3 clr-col-8">
         <div class="card">
             <div class="card-header">
-                <%= vmresult["name"] %>
+                <%= podcast_title %>
             </div>
             <div class="card-block">
                 <div class="card-media-block">
@@ -13,18 +13,16 @@
                     
                     <div class="card-media-description">
                         <span class="card-media-title">
-                            <%= vmresult["vm"] %>
+                            BLAH
                         </span>
                         <span class="card-media-text">
-                            <clr-icon shape="cpu"></clr-icon> <%= vmresult["cpu_count"] %><br />
-                            <clr-icon shape="memory"></clr-icon> <%= vmresult["memory_size_MiB"] %>
+                            <clr-icon shape="cpu"></clr-icon> BLAH<br />
+                            <clr-icon shape="memory"></clr-icon> Blah
                         </span>
                     </div>
                 </div>
                 <div class="card-text">
-                    The machine is currently 
-                    <% if vmresult["power_state"] == "POWERED_ON" %>RUNNING<% end %>
-          <% if vmresult["power_state"] == "POWERED_OFF" %>OFF<% end %>
+                    Blah
                 </div>
             </div>
             <div class="card-footer">
@@ -33,4 +31,4 @@
         </div>
     </div>
 </div>
-  <% end %>
+ <% end %>
